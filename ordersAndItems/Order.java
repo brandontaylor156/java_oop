@@ -34,4 +34,8 @@ public class Order{
         return items;
     }
 
+    public void setStatus(boolean status){
+        ready = status;
+    }
+
 }
