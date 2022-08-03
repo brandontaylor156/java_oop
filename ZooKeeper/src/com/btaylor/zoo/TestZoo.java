@@ -11,6 +11,16 @@ public class TestZoo {
 		myGorilla.eatBananas();
 		myGorilla.climb();
 		myGorilla.displayEnergy();
+		
+		Bat myBat = new Bat();
+		myBat.attackTown();
+		myBat.attackTown();
+		myBat.attackTown();
+		myBat.eatHumans();
+		myBat.eatHumans();
+		myBat.fly();
+		myBat.fly();
+		myBat.displayEnergy();
 	}
 
 }
