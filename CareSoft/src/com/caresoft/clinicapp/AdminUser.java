@@ -13,7 +13,6 @@ public class AdminUser extends User implements HIPAACompliantUser, HIPAAComplian
     // TO DO: Implement a constructor that takes an ID and a role
     public AdminUser(Integer id, String role) {
     	super(id);
-
     	this.role = role;
     	securityIncidents = new ArrayList<String>();
     }
