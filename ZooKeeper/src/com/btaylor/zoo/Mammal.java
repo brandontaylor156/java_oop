@@ -7,8 +7,9 @@ public class Mammal {
 		energyLevel = 100;
 	}
 	
-	public void displayEnergy() {
+	public int displayEnergy() {
 		System.out.println(energyLevel);
+		return energyLevel;
 	}
 	
 }
