@@ -6,11 +6,9 @@ public class ListTester {
 		SinglyLinkedList sll = new SinglyLinkedList();
 		sll.add(3);
 		sll.add(0);
-		sll.add(5);
-		sll.add(70);
-		sll.add(8);
-		System.out.println("Found at index " + sll.find(8));
-		sll.removeAt(5);
+		System.out.println(sll.find(8));
+		sll.removeAt(1);
+		sll.removeAt(0);
 		sll.printValues();
 	}
 

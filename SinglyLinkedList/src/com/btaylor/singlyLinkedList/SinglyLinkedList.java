@@ -59,6 +59,7 @@ public class SinglyLinkedList {
 		return -1;
 	}
 	
+	// Check if list empty, then if index 0 (1 node vs more than 1), then start at index 1 with a runner and loop through
 	public void removeAt(int index) {
 		// If list
 		if (head == null) {
@@ -76,7 +77,8 @@ public class SinglyLinkedList {
 			return;
 		}
 		
-		// Runner with start count of 0, while runner
+		// Runner starts at first node but with start count of 1
+		// We are removing the node at the position 1 above current position, (while runner)
 		// runner.next = runner.next.next
 		Node runner = head;
 		int count = 1;
@@ -84,6 +86,7 @@ public class SinglyLinkedList {
 			while(runner != null) {
 				if (count == index) {
 					runner.next = runner.next.next;
+					return;
 				}
 				count++;
 				runner = runner.next;
