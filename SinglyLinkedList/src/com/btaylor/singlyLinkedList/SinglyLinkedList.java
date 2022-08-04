@@ -61,7 +61,6 @@ public class SinglyLinkedList {
 	
 	// Check if list empty, then if index 0 (1 node vs more than 1), then start at index 1 with a runner and loop through
 	public void removeAt(int index) {
-		// If list
 		if (head == null) {
 			System.out.println("Empty list");
 			return;
@@ -78,24 +77,24 @@ public class SinglyLinkedList {
 		}
 		
 		// Runner starts at first node but with start count of 1
-		// We are removing the node at the position 1 above current position, (while runner)
+		// We are removing the node at the position 1 above current position, (while RUNNER.NEXT)
 		// runner.next = runner.next.next
 		Node runner = head;
 		int count = 1;
-		try {
-			while(runner != null) {
-				if (count == index) {
-					runner.next = runner.next.next;
-					return;
-				}
-				count++;
-				runner = runner.next;
-				}
-			} catch (NullPointerException e) {
-				System.out.println("Out of bounds");
+		
+		// IMPORTANT: WHILE RUNNER.NEXT FOR REMOVAL AT INDEX
+		while(runner.next != null) {
+			if (count == index) {
+				// runner.next.next will point to null if runner on second to last node, so no error
+				runner.next = runner.next.next;
+				return;
+			}
+			count++;
+			runner = runner.next;
+			}
 		}
 		
-	}
+	
 	
 	public void printValues() {
 		if (head == null) {

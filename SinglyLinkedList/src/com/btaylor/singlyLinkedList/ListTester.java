@@ -6,8 +6,8 @@ public class ListTester {
 		SinglyLinkedList sll = new SinglyLinkedList();
 		sll.add(3);
 		sll.add(0);
-		System.out.println(sll.find(8));
-		sll.removeAt(1);
+		sll.add(8);
+		sll.removeAt(0);
 		sll.removeAt(0);
 		sll.printValues();
 	}
