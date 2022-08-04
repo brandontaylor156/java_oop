@@ -6,6 +6,7 @@ public class SinglyLinkedList {
 		head = null;
 	}
 	
+	// Add to end of list
 	public void add(int value) {
 		Node newNode = new Node(value);
 		if (head == null) {
@@ -20,6 +21,7 @@ public class SinglyLinkedList {
 		}
 	}
 	
+	// Remove from end of list
 	public void remove() {
 		if (head == null) 
 			return;
@@ -36,6 +38,7 @@ public class SinglyLinkedList {
 		runner.next = null;
 	}
 	
+	// Find value
 	public int find(int value) {
 		if (head == null) {
 			System.out.println("Empty list");
@@ -57,11 +60,13 @@ public class SinglyLinkedList {
 	}
 	
 	public void removeAt(int index) {
+		// If list
 		if (head == null) {
 			System.out.println("Empty list");
 			return;
 		}
 		
+		// If index is 0
 		if (index == 0) {
 			if (head != null && head.next == null) 
 				head = null;
@@ -71,9 +76,11 @@ public class SinglyLinkedList {
 			return;
 		}
 		
+		// Runner with start count of 0, while runner
+		// runner.next = runner.next.next
+		Node runner = head;
+		int count = 1;
 		try {
-			Node runner = head;
-			int count = 1;
 			while(runner != null) {
 				if (count == index) {
 					runner.next = runner.next.next;

@@ -9,7 +9,8 @@ public class ListTester {
 		sll.add(5);
 		sll.add(70);
 		sll.add(8);
-		sll.removeAt(78);
+		System.out.println("Found at index " + sll.find(8));
+		sll.removeAt(5);
 		sll.printValues();
 	}
 
